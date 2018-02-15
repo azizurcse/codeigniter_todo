@@ -15,6 +15,35 @@ public function show ()
 	// }
 }
 
+public function insert()
+{
+	$username="azizur";
+	$password="123";
+	$this->user_model->create_users([
+		'username'=>$username,
+		'password'=>$password
+
+		]);
+}
+
+
+public function update()
+{
+	$id=3;
+	$username="azizur rahman";
+	$password="123456";
+	$this->user_model->update_users([
+		'username'=>$username,
+		'password'=>$password
+
+		],$id);
+}
+
+public function delete()
+{
+	$id=3;
+	$this->user_model->delete_users($id);
+}
 
 }
 
